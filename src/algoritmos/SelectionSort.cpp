@@ -22,6 +22,7 @@ void SelectionSort::paso() {
     }
 
     if (m_j == m_i) {
+        // reiniciar mínimo del ciclo
         m_minIndex = m_i;
         m_j = m_i + 1;
     }
@@ -33,6 +34,7 @@ void SelectionSort::paso() {
         }
         m_j++;
     } else {
+        // intercambio final del ciclo
         if (m_minIndex != m_i) {
             std::swap(m_datos[m_i], m_datos[m_minIndex]);
             m_intercambios++;

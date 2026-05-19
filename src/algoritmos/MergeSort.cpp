@@ -19,7 +19,7 @@ void MergeSort::initializeMergeTasks() {
         return;
     }
     
-    // Add initial merge tasks for subarrays of size 1
+    // tareas iniciales (pares de elementos)
     for (int i = 0; i < static_cast<int>(m_datos.size()) - 1; i += 2) {
         int left = i;
         int mid = i;
@@ -45,7 +45,7 @@ void MergeSort::paso() {
         task.initialized = true;
     }
 
-    // Perform one step of merging
+    // una operación de mezcla
     if (task.i <= task.mid && task.j <= task.right) {
         m_comparaciones++;
         if (m_datos[task.i] <= m_datos[task.j]) {
@@ -58,16 +58,14 @@ void MergeSort::paso() {
     } else if (task.j <= task.right) {
         m_temp[task.k++] = m_datos[task.j++];
     } else {
-        // Copy merged data back
+        // copiar resultado final
         for (int idx = task.left; idx <= task.right; idx++) {
             m_datos[idx] = m_temp[idx];
         }
+
         m_intercambios += (task.right - task.left + 1);
-        
-        // Remove completed task
         m_mergeTasks.pop();
-        
-        // If no more tasks, we're done
+
         if (m_mergeTasks.empty()) {
             m_terminado = true;
         }

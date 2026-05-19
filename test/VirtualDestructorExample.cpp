@@ -3,26 +3,30 @@
 class Base {
 public:
     Base() { std::cout << "Base constructor\n"; }
-    virtual ~Base() { std::cout << "Base destructor\n"; } // Virtual - SOLUTION!
+
+    virtual ~Base() { std::cout << "Base destructor\n"; } // destructor virtual
 };
 
 class Derived : public Base {
 private:
     int* data;
+
 public:
-    Derived() : data(new int[1000]) { 
-        std::cout << "Derived constructor\n"; 
+    Derived() : data(new int[1000]) {
+        std::cout << "Derived constructor\n";
     }
-    
-    ~Derived() { 
-        delete[] data; 
-        std::cout << "Derived destructor\n"; 
-    } // This won't be called!
+
+    ~Derived() {
+        delete[] data;
+        std::cout << "Derived destructor\n";
+    } // destructor de Derived
 };
 
 int main() {
-    Base* ptr = new Derived(); // Creates Derived object
-    delete ptr; // Calls Derived destructor (virtual)
-    // No MEMORY LEAK: Derived's data array is properly freed!
+    Base* ptr = new Derived();
+
+    delete ptr; // llama destructor correcto (virtual)
+
+    // evita memory leak (se libera Derived)
     return 0;
 }

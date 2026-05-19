@@ -3,15 +3,28 @@
 
 #include "algoritmos/AlgoritmoOrdenamiento.h"
 
+// Clase que implementa el algoritmo Bubble Sort
 class BubbleSort : public AlgoritmoOrdenamiento {
 public: 
+
+    // Constructor que recibe los datos
     explicit BubbleSort(const std::vector<int>& datos);
+
+    // Reinicia el algoritmo con nuevos datos
     void reiniciar(const std::vector<int>& datos) override;
+
+    // Ejecuta un paso del Bubble Sort
     void paso() override;
-    std::string nombre() const override { return "Bubble Sort"; }
+
+    // Devuelve el nombre del algoritmo
+    std::string nombre() const override { 
+        return "Bubble Sort"; 
+    }
 
 private: 
-    bool m_huboSwap; // optimizacion: sin swaps => arreglo ordenado
+
+    // Verifica si hubo intercambio
+    bool m_huboSwap;
 };
 
 #endif

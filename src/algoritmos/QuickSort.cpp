@@ -13,7 +13,7 @@ QuickSort::QuickSort(const std::vector<int>& datos)
 void QuickSort::reiniciar(const std::vector<int>& datos) {
     AlgoritmoOrdenamiento::reiniciar(datos);
     while (!m_stack.empty()) m_stack.pop();
-    
+
     if (m_datos.size() > 1) {
         m_stack.push({0, static_cast<int>(m_datos.size()) - 1});
     } else {
@@ -40,7 +40,7 @@ void QuickSort::paso() {
     }
 
     if (!m_partitionPhase) {
-        // Initialize partition
+        // iniciar partición
         m_pivot = m_datos[m_high];
         m_i_index = m_low - 1;
         m_j_index = m_low;
@@ -58,23 +58,23 @@ void QuickSort::paso() {
         }
         m_j_index++;
     } else {
-        // Final swap
+        // finalizar partición
         if (m_i_index + 1 != m_high) {
             std::swap(m_datos[m_i_index + 1], m_datos[m_high]);
             m_intercambios++;
         }
+
         int pivotIndex = m_i_index + 1;
-        
         m_stack.pop();
-        
-        // Push subarrays to stack
+
+        // subarreglos restantes
         if (pivotIndex - 1 > m_low) {
             m_stack.push({m_low, pivotIndex - 1});
         }
         if (pivotIndex + 1 < m_high) {
             m_stack.push({pivotIndex + 1, m_high});
         }
-        
+
         m_partitionPhase = false;
     }
 
