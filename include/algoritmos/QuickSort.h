@@ -1,7 +1,7 @@
 #ifndef QUICKSORT_H
 #define QUICKSORT_H
 
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 #include <stack>
 
 class QuickSort : public AlgoritmoOrdenamiento {

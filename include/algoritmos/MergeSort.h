@@ -1,7 +1,7 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
 
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 #include <queue>
 
 class MergeSort : public AlgoritmoOrdenamiento {

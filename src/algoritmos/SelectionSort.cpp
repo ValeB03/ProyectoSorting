@@ -1,4 +1,4 @@
-#include "SelectionSort.h"
+#include "algoritmos/SelectionSort.h"
 
 SelectionSort::SelectionSort(const std::vector<int>& datos) 
     : AlgoritmoOrdenamiento(datos), m_minIndex(0) {

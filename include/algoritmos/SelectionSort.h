@@ -1,7 +1,7 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 
 class SelectionSort : public AlgoritmoOrdenamiento {
 public: 

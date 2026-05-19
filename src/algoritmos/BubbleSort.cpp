@@ -1,4 +1,4 @@
-#include "BubbleSort.h"
+#include "algoritmos/BubbleSort.h"
 
 BubbleSort::BubbleSort(const std::vector<int>& datos) 
     : AlgoritmoOrdenamiento(datos), m_huboSwap(false) {

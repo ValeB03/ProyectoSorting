@@ -1,7 +1,7 @@
 #ifndef BUBBLESORT_H
 #define BUBBLESORT_H
 
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 
 class BubbleSort : public AlgoritmoOrdenamiento {
 public: 

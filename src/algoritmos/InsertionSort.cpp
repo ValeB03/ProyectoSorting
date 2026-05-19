@@ -1,4 +1,4 @@
-#include "InsertionSort.h"
+#include "algoritmos/InsertionSort.h"
 
 InsertionSort::InsertionSort(const std::vector<int>& datos) 
     : AlgoritmoOrdenamiento(datos) {

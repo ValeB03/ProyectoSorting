@@ -1,4 +1,4 @@
-#include "MergeSort.h"
+#include "algoritmos/MergeSort.h"
 #include <algorithm>
 
 MergeSort::MergeSort(const std::vector<int>& datos) 

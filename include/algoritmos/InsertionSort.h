@@ -1,7 +1,7 @@
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
 
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 
 class InsertionSort : public AlgoritmoOrdenamiento {
 public: 

@@ -1,4 +1,4 @@
-#include "QuickSort.h"
+#include "algoritmos/QuickSort.h"
 
 QuickSort::QuickSort(const std::vector<int>& datos) 
     : AlgoritmoOrdenamiento(datos) {

@@ -1,4 +1,4 @@
-#include "AlgoritmoOrdenamiento.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
 
 AlgoritmoOrdenamiento::AlgoritmoOrdenamiento(const std::vector<int>& datos) 
     : m_datos(datos), m_terminado(false), m_i(0), m_j(0), 

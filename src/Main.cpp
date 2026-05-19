@@ -5,12 +5,12 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
-#include "AlgoritmoOrdenamiento.h"
-#include "BubbleSort.h"
-#include "InsertionSort.h"
-#include "SelectionSort.h"
-#include "MergeSort.h"
-#include "QuickSort.h"
+#include "algoritmos/AlgoritmoOrdenamiento.h"
+#include "algoritmos/BubbleSort.h"
+#include "algoritmos/InsertionSort.h"
+#include "algoritmos/SelectionSort.h"
+#include "algoritmos/MergeSort.h"
+#include "algoritmos/QuickSort.h"
 #include <cstdlib>
 #include <ctime>
 
